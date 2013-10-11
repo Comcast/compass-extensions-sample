@@ -1,0 +1,146 @@
+@import "compass";
+
+/* Possible Errors */
+
+.box-model {
+  border: 1px solid black;
+  width: 100px;
+}
+
+.display-property-grouping {
+  display: inline;
+  height: 25px;
+}
+
+.duplicate-properties {
+  border: 1px solid black;
+  border: 1px solid black;
+}
+
+.empty-rules {
+  // css comment
+}
+
+.known-properties {
+  clr: red;
+  color: foo;
+}
+
+/* Compatibility */
+
+.adjoining-classes .foo.bar {
+  display: block;
+}
+
+.box-sizing {
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 5px;
+  width: 100px;
+}
+
+.compatible-vendor-prefixes {
+  -moz-border-radius: 5px;
+}
+
+.gradients {
+  background: -webkit-linear-gradient(top, #1e5799 0%, #7db9e8 100%);
+}
+
+.text-indent {
+  text-indent: -999px;
+}
+
+.vendor-prefix {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.fallback-colors {
+  color: rgba(100, 200, 100, 0.5);
+  background-color: rgba(100, 200, 100, 0.5);
+}
+
+.star-property-hack {
+  *width: 100px;
+}
+
+.underscore-property-hack {
+  _width: 100px;
+}
+
+/* Performance */
+
+@for $i from 1 through 6 {
+  @include font-face("font-faces #{$i}", font-files("custom-font-#{$i}.otf"));
+}
+
+.regex-selectors[class*=xxx] {
+  color: red;
+}
+
+.universal-selector * {
+  color: red;
+}
+
+.unqualified-attributes [type=text] {
+  color: red;
+}
+
+.zero-units {
+  margin: 0px;
+}
+
+div.overqualified-elements {
+  color: red;
+}
+
+.shorthand {
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.duplicate-background-images {
+  background: url(sprite.png) -16px 0 no-repeat;
+}
+
+.duplicate-background-images-2 {
+  background: url(sprite.png) -32px 0 no-repeat;
+}
+
+/* Maintainability & Duplication */
+
+@for $i from 1 through 10 {
+  .floats-#{$i} {
+    float: left;
+  }
+  .font-sizes-#{$i} {
+    font-size: 10px + $i;
+  }
+}
+
+#ids {
+  display: block;
+}
+
+.important {
+  color: red !important;
+}
+
+/* Accessibility */
+
+.outline-none {
+  outline: none;
+}
+
+/* OOCSS */
+
+.qualified-headings h3 {
+  font-weight: normal;
+}
+
+.unique-headings h3 {
+  font-weight: bold;
+}

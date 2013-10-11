@@ -1,0 +1,155 @@
+@import "compass";
+
+/* Possible Errors */
+
+.box-model {
+  border-top: 1px solid black;
+  width: 100px;
+}
+
+.display-property-grouping {
+  display: inline;
+  margin-left: 10px;
+}
+
+.duplicate-properties {
+  border: 1px solid black;
+  border: 1px solid red;
+}
+
+.empty-rules {
+  display: block;
+}
+
+.known-properties {
+  -moz-foo: bar;
+}
+
+/* Compatibility */
+
+.adjoining-classes .foo .bar {
+  display: block;
+}
+
+.box-sizing {
+  // border: 1px solid black;
+  // padding: 5px;
+  // those 2 rules above "fix" box-sizing, but throw a warning for box-model
+  width: 88px;
+}
+
+.compatible-vendor-prefixes {
+  @include border-radius(5px);
+}
+
+.gradients {
+  @include background(linear-gradient(top, #1e5799, #7db9e8));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));
+  background: -ms-linear-gradient(top, #1e5799 0%, #7db9e8 100%);
+}
+
+.text-indent {
+  text-indent: -999px;
+  direction: ltr;
+}
+
+.vendor-prefix {
+  @include border-radius(5px);
+}
+
+.fallback-colors {
+  color: tint(rgb(100, 200, 100), 50%);
+  color: rgba(100, 200, 100, 0.5);
+  background-color: tint(rgb(100, 200, 100), 50%);
+  background-color: rgba(100, 200, 100, 0.5);
+}
+
+.star-property-hack {
+  width: 100px;
+}
+
+.underscore-property-hack {
+  width: 100px;
+}
+
+/* Performance */
+
+@for $i from 1 through 5 {
+  @include font-face("font-faces #{$i}", font-files("custom-font-#{$i}.eot?#iefix", "custom-font-#{$i}.otf"));
+}
+
+a[rel=regex-selectors] {
+  color: red;
+}
+
+.universal-selector * a {
+  color: red;
+}
+
+.unqualified-attributes input[type=text] {
+  color: red;
+}
+
+.zero-units {
+  margin: 0;
+}
+
+div.overqualified-elements {
+  color: red;
+}
+
+p.overqualified-elements {
+  color: red;
+}
+
+.shorthand {
+  margin: 20px 10px 30px;
+}
+
+.duplicate-background-images {
+  background: url(sprite.png) no-repeat;
+}
+
+.duplicate-background-images-1 {
+  background-position: -16px 0;
+}
+
+.duplicate-background-images-2 {
+  background-position: -32px 0;
+}
+
+/* Maintainability & Duplication */
+
+@for $i from 1 through 9 {
+  .floats-#{$i} {
+    float: left;
+  }
+  .font-sizes-#{$i} {
+    font-size: 10px + $i;
+  }
+}
+
+.ids {
+  display: block;
+}
+
+.important {
+  color: red;
+}
+
+/* Accessibility */
+
+.outline-none:focus {
+  outline: none;
+  border: 1px solid red;
+}
+
+/* OOCSS */
+
+h3 {
+  font-weight: normal;
+}
+
+h3:hover {
+  font-weight: bold;
+}

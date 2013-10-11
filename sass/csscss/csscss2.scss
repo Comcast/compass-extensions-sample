@@ -1,0 +1,39 @@
+@import "compass";
+@import "variables";
+@import "mixins";
+
+article, #comments {
+  font-family: Helvetica;
+  font-size: 1em;
+  color: #333;
+  @include zero-out;
+}
+
+
+.screenshot img {
+  float: left;
+  border-radius: 3px;
+  border-color: adjust-saturation($blue, -33%);
+  margin: 1em;
+}
+a.blurb img {
+  float: left;
+  border-radius: 3px;
+  border-color: adjust-saturation($blue, -33%);
+  margin: 1em;
+}
+
+
+body.home h2 {
+  font-family: Georgia;
+  font-size: 2em;
+  border-bottom: 1px solid #cc0000;
+  padding: 0 0 0.5em;
+}
+
+
+article:hover {
+  background-color: #FDFEBD;
+  color: #000;
+  outline: dotted 1px;
+}

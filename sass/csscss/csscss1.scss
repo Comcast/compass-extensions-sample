@@ -1,0 +1,39 @@
+@import "compass";
+@import "variables";
+@import "mixins";
+
+.contact .content .primary {
+  font-family: Helvetica;
+  font-size: 1em;
+  color: #333;
+  @include zero-out;
+}
+
+
+.profile-picture {
+  float: left;
+  border-radius: 3px;
+  border-color: adjust-saturation($blue, -33%);
+  margin: 1em;
+}
+
+
+.work h2:first-child, .archive h2:first-child, .missing h2:first-child, .about h2, .contact h2 {
+  font-family: Georgia;
+  font-size: 2em;
+  border-bottom: 1px solid #cc0000;
+  padding: 0 0 0.5em;
+}
+
+
+article.blurb:hover {
+  background-color: #FDFEBD;
+  color: #000;
+  outline: dotted 1px;
+}
+
+
+#{headers()} {
+  color: shade(#f00, 50%);
+  border-bottom: 1px solid shade(#f00, 20%);
+}
