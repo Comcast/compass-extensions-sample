@@ -25,6 +25,8 @@ Then, to install additional dependencies execute:
 
     $ bundle install
 
+from the root of this Compass project.
+
 ## CSS Lint Usage
 
 Run the following command from the root of your Compass project:
