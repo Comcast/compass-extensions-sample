@@ -1,5 +1,4 @@
 # Require any additional compass plugins here.
-command_extensions = ["csslint", "csscss"]
 
 # Set this to the root of your project when deployed:
 http_path = "/"

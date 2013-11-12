@@ -4,7 +4,7 @@ Basic Compass project with sample .scss files to demonstrate the usage of [CSS L
 
 ## Installation
 
-There is currently a [bug in Compass](https://github.com/chriseppstein/compass/issues/1053) that prevents external Compass commands from being registered if they're required in a project's config.rb file. So until that is resolved, you'll have to build this [custom version of Compass](https://github.com/Comcast/compass/tree/command_extensions) that [adds support for command-line extensions](https://github.com/chriseppstein/compass/pull/1261):
+There is currently a [bug in Compass](https://github.com/chriseppstein/compass/issues/1053) that prevents external Compass commands from being registered if they're required in a project's config.rb file. So until that is resolved, you'll have to build this [custom version of Compass](https://github.com/Comcast/compass/tree/require_commands) that [adds support for command-line extensions](https://github.com/chriseppstein/compass/pull/1409):
 
 https://github.com/Comcast/compass
 
@@ -17,7 +17,7 @@ Be sure to take note of the .gem filename
 
 Once that builds, install your locally-built version of Compass
 
-    $ gem install compass-0.13.alpha.4.<hash>.gem
+    $ gem install compass-0.13.alpha.7.<hash>.gem
 
 Be sure to use the actual filename that the build command created.
 
