@@ -10,7 +10,7 @@ https://github.com/Comcast/compass
 
 Clone that project, then from the project root run
 
-    $ git checkout command_extensions
+    $ git checkout require_commands
     $ gem build compass.gemspec
 
 Be sure to take note of the .gem filename
