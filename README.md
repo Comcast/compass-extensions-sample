@@ -1,31 +1,14 @@
 # compass-extensions-sample
 
-Basic Compass project with sample .scss files to demonstrate the usage of [CSS Lint](http://comcast.github.io/compass-csslint/) & [csscss](https://github.com/Comcast/compass-csscss)
+Basic Compass project with sample .scss files to demonstrate the usage of [CSS Lint](http://comcast.github.io/compass-csslint/) & [csscss](https://github.com/Comcast/compass-csscss) with Compass.
 
 ## Installation
 
-There is currently a [bug in Compass](https://github.com/chriseppstein/compass/issues/1053) that prevents external Compass commands from being registered if they're required in a project's config.rb file. So until that is resolved, you'll have to build this [custom version of Compass](https://github.com/Comcast/compass/tree/require_commands) that [adds support for command-line extensions](https://github.com/chriseppstein/compass/pull/1409):
-
-https://github.com/Comcast/compass
-
-Clone that project, then from the project root run
-
-    $ git checkout require_commands
-    $ gem build compass.gemspec
-
-Be sure to take note of the .gem filename
-
-Once that builds, install your locally-built version of Compass
-
-    $ gem install compass-0.13.alpha.7.<hash>.gem
-
-Be sure to use the actual filename that the build command created.
-
-Then, to install additional dependencies execute:
+Assuming ruby is installed on your system, clone this project & then from the root run:
 
     $ bundle install
 
-from the root of this Compass project.
+Note that this requires at least version 1.0.0.alpha.13 of [Compass](http://compass-style.org/) to work properly.
 
 ## CSS Lint Usage
 
